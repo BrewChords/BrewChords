@@ -6,33 +6,20 @@
     <title>BrewChords - Instagram Posts</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body.light-mode {
-            background-color: #fff;
-            color: #000;
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
         }
-        body.dark-mode {
-            background-color: #121212;
-            color: #fff;
-        }
-        .theme-toggle {
-            margin: 20px auto;
-            padding: 10px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            background-color: transparent;
-            color: #000;
-        }
-        .theme-toggle.light-mode {
-            content: '\2600'; /* Sun symbol */
-        }
-        .theme-toggle.dark-mode {
-            content: '\1F319'; /* Half-moon symbol */
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
-<body class="light-mode">
+<body>
     <div class="container">
         <header>
             <h1>BrewChords Instagram Posts</h1>
@@ -41,7 +28,6 @@
         <main>
             <div class="instagram-feed">
                 <iframe src="https://www.instagram.com/brewchordsindia/embed" width="100%" height="600px" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️</button>
             </div>
             <a href="index.html" class="btn">Back to Home</a>
         </main>
@@ -50,20 +36,5 @@
             <div class="footer">&copy; 2025 BrewChords. Savor the Flavor, Feel the Beat.</div>
         </footer>
     </div>
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeButton = document.getElementById('themeToggle');
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                themeButton.textContent = '🌙';
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                themeButton.textContent = '☀️';
-            }
-        }
-    </script>
 </body>
 </html>
